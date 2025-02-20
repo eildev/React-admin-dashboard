@@ -1,0 +1,36 @@
+.star{
+    color: red;
+}
+
+.defaultSelect{
+    color: blue !important;
+}
+
+.from{
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.note{
+    color: chocolate;
+    font-size: 12px;
+}
+
+.extra{
+    max-height: 100%;
+}
+
+.up{
+    max-height: 200px;
+}
+
+.proName{
+    font-size: 14px !important;
+}
+
+.upImg{
+    max-height: 220px !important;
+
+}
