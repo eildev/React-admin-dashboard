@@ -27,6 +27,7 @@ import MainDashboard from "../pages/dashboard/main-dashboard/MainDashboard";
 import AssetDashboard from "../pages/dashboard/asset-dashboard/AssetDashboard";
 import Purchase from "../pages/store-managment/purchase/Purchase";
 import ManagePurchase from "../pages/store-managment/purchase/ManagePurchase";
+import ExpensesManagement from "../pages/Expenses/ExpensesManagement";
 
 
 // Creating the router configuration for the application
@@ -135,6 +136,10 @@ export const router = createBrowserRouter([
             {
                 path: "/manage-purchase", // Salary Sheet Page
                 element: <ManagePurchase />,
+            },
+            {
+                path: "/expenses",
+                element: <ExpensesManagement></ExpensesManagement>,
             },
         ],
     },

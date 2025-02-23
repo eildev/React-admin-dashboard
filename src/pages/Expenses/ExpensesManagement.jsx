@@ -4,7 +4,8 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { CiSquarePlus } from "react-icons/ci";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const AddProduct = () => {
+const ExpensesManagement = () => {
+
     const [imagePreview, setImagePreview] = useState(null);
     const [variation, setVariation] = useState(false);
     const fileInputRef = useRef(null);
@@ -44,37 +45,47 @@ const AddProduct = () => {
       setVariations(variations.filter(variation => variation.id !== id)); // নির্দিষ্ট variation মুছে ফেলা
     };
 
+
     return (
         <>
-            <Breadcrumb section="New Product" />
+            <Breadcrumb section="Add Expanse" />
             {/* <h5>Add Product</h5> */}
             <from className="from">
-                <div className="col-lg-8">
+                <div className="col-lg-12">
                     <div className="card">
                         <div className="card-header">
-                            <h5 className="card-title mb-0">Add Product</h5>
+                            <h5 className="card-title mb-0">Add Expanse</h5>
                         </div>
                         <div className="card-body">
                             <div className="row gy-3">
                                 <div className="col-md-6">
-                                    <label className="form-label">Product Name <span className="star">*</span></label>
+                                    <label className="form-label">Purpose <span className="star">*</span></label>
                                     <input
                                         type="text"
                                         name="#0"
                                         className="form-control"
-                                        placeholder="Name"
+                                        placeholder="Enter Purpose"
                                     />
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Category <span className="star">*</span></label>
+                                    <label className="form-label">Amount <span className="star">*</span></label>
+                                    <input
+                                        type="text"
+                                        name="#0"
+                                        className="form-control"
+                                        placeholder="Enter Amount"
+                                    />
+                                </div>
+                                <div className="col-md-3">
+                                    <label className="form-label">Select Expense Category <span className="star">*</span></label>
                                     <select className="form-select" defaultValue="none">
-                                        <option >Select Category</option>
+                                        <option >Select Select Expense Category</option>
                                         <option value="UK">UK</option>
                                         <option value="BD">BD</option>
                                         <option value="EU">EU</option>
                                     </select>
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-md-3">
                                     <label className="form-label">Subcategory <span className="star">*</span></label>
                                     <select className="form-select" defaultValue="none">
                                         <option >Select Subcategory</option>
@@ -84,14 +95,14 @@ const AddProduct = () => {
                                     </select>
                                 </div>
                                 <div className="col-md-6">
-                                    <label className="form-label">Brand <span className="star">*</span></label>
+                                    <label className="form-label">Splender <span className="star">*</span></label>
 
-                                    <select className="form-select" defaultValue="US">
-                                        <option value="US">US</option>
-                                        <option value="UK">UK</option>
-                                        <option value="BD">BD</option>
-                                        <option value="EU">EU</option>
-                                    </select>
+                                    <input
+                                        type="text"
+                                        name="#0"
+                                        className="form-control"
+                                        placeholder="Enter Splender"
+                                    />
                                     {/* <input
                                     type="text"
                                     name="#0"
@@ -100,119 +111,26 @@ const AddProduct = () => {
                                 /> */}
 
                                 </div>
-                                <div className="col-md-4">
-                                    <label className="form-label">Size <span className="star">*</span></label>
+                                <div className="col-md-6">
+                                    <label className="form-label">Date <span className="star">*</span></label>
+                                    <input
+                                        type="date"
+                                        name="#0"
+                                        className="form-control"
+                                        placeholder="Enter Expense Date"
+                                    />
+                                </div>
+                                <div className="col-md-6">
+                                    <label className="form-label">Select Bank Acoount <span className="star">*</span></label>
                                     <select className="form-select" defaultValue="00.00">
-                                        <option >Select Size</option>
+                                        <option >Select Bank Acoount</option>
                                         <option value="UK">UK</option>
                                         <option value="BD">BD</option>
                                         <option value="EU">EU</option>
                                     </select>
                                 </div>
-                                <div className="col-md-4">
-                                    <label className="form-label">Unit <span className="star">*</span></label>
-                                    <select className="form-select" defaultValue="00.00">
-                                        <option >Select Unit</option>
-                                        <option value="UK">UK</option>
-                                        <option value="BD">BD</option>
-                                        <option value="EU">EU</option>
-                                    </select>
-                                </div>
-                                <div className="col-md-4">
-                                    <label className="form-label">Model No</label>
-                                    <input
-                                        type="text"
-                                        name="#0"
-                                        className="form-control"
-                                        placeholder="Model No"
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <label className="form-label">Cost Price <span className="star">*</span></label>
-                                    <input
-                                        type="number"
-                                        name="#0"
-                                        className="form-control"
-                                        placeholder="00.00"
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <label className="form-label">B2C Price <span className="star">*</span></label>
-                                    <input
-                                        type="number"
-                                        name="#0"
-                                        className="form-control"
-                                        placeholder="00.00"
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <label className="form-label">B2B Price <span className="star">*</span></label>
-                                    <input
-                                        type="number"
-                                        name="#0"
-                                        className="form-control"
-                                        placeholder="00.00"
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <label className="form-label">Origin</label>
-                                    <select className="form-select" defaultValue="none">
-                                        <option >Select Origin</option>
-                                        <option value="UK">UK</option>
-                                        <option value="BD">BD</option>
-                                        <option value="EU">EU</option>
-                                    </select>
-                                </div>
-                                <div className="col-12">
-                                    <label className="form-label">Description</label>
-                                    <textarea rows={3} className="form-control" placeholder="Enter Description"></textarea>
-                                </div>
-                                {/* <div className="col-12">
-                            <button type="submit" className="btn btn-primary-600">
-                                Submit
-                            </button>
-                        </div> */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* extra info */}
-                <div className=" extra">
-                    <div className="card">
-                        <div className="card-header">
-                            <h5 className="card-title mb-0">Extra Info</h5>
-                        </div>
-                        <div className="card-body">
-                            <div className="row gy-3">
-                                <div className="col-6">
-                                    <label className="form-label">Color</label>
-                                    <select className="form-select" defaultValue="none">
-                                        <option >Select Color</option>
-                                        <option value="UK">UK</option>
-                                        <option value="BD">BD</option>
-                                        <option value="EU">EU</option>
-                                    </select>
-                                </div>
-                                <div className="col-6">
-                                    <label className="form-label">Quality</label>
-                                    <select className="form-select" defaultValue="none">
-                                        <option >Select Quality</option>
-                                        <option value="UK">UK</option>
-                                        <option value="BD">BD</option>
-                                        <option value="EU">EU</option>
-                                    </select>
-                                </div>
-                                <div className="col-12">
-                                    <label className="form-label">Current Stock</label>
-                                    <input
-                                        type="number"
-                                        name="#0"
-                                        className="form-control"
-                                        placeholder="Enter Current Stock"
-                                    />
-                                </div>
-                                <div className="col-12 ">
-                                    <label className="form-label">Product Image</label>
+                                <div className="col-sm-6">
+                                    <label className="form-label">Product Image</label> <br />
                                     <span className="note">Note: Image not required. If you add a category image please add a 400 X 400 size image.</span>
                                     <div className="col-md-12">
                                         <div className="card p-0">
@@ -269,18 +187,24 @@ const AddProduct = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-12">
-                                    <button type="submit" className="btn btn-primary-600 me-10">
-                                        Submit
-                                    </button>
-                                    <button onClick={() => { setVariation(!variation)}}  className="btn btn-primary-400">
-                                        Add Variation
-                                    </button>
+                                <div className="col-sm-6">
+                                    <label className="form-label">Description</label>
+                                    <textarea rows={3} className="form-control" placeholder="Enter Description"></textarea>
                                 </div>
+                                <button type="submit" className="btn btn-primary-600 me-10 col-1">
+                                        Save
+                                    </button>
+                                {/* <div className="col-12">
+                            <button type="submit" className="btn btn-primary-600">
+                                Submit
+                            </button>
+                        </div> */}
                             </div>
                         </div>
                     </div>
                 </div>
+                {/* extra info */}
+                
             </from>
             {/* variation table */}
             {
@@ -402,4 +326,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default ExpensesManagement;
