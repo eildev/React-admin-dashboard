@@ -1,36 +1,88 @@
-.star{
+.star {
     color: red;
 }
 
-.defaultSelect{
+.defaultSelect {
     color: blue !important;
 }
 
-.from{
+.from {
     display: flex;
     justify-items: space-between;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
 }
 
-.note{
+@media (min-width: 991px) {
+    .from {
+        display: flex;
+        justify-items: space-between;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+.note {
     color: chocolate;
     font-size: 12px;
 }
 
-.extra{
+.extra {
     max-height: 100%;
 }
 
-.up{
+.up {
     max-height: 200px;
 }
 
-.proName{
+.proName {
     font-size: 14px !important;
 }
 
-.upImg{
+.upImg {
+    min-height: 220px !important;
     max-height: 220px !important;
+}
 
+.img_div {
+    min-height: 220px;
+}
+
+.variation_inputs {
+    width: 150px !important;
+
+}
+
+
+
+.variation_img {
+    font-size: 16px !important;
+    text-wrap: nowrap !important;
+    padding: 5px 0 0px 10px !important;
+    max-height: 45px !important;
+    max-width: 280px;
+}
+
+.variation_plus{
+    font-size: 30px;
+    cursor: pointer;
+    transform: translateY(-5%);
+    color: green;
+}
+
+.variation_delete{
+    font-size: 20px;
+    cursor: pointer;
+    transform: translate(20%, -10%);
+    color: crimson;
+}
+
+.variation_table{
+    margin: 10px 0;
+}
+
+.table{
+    
 }
