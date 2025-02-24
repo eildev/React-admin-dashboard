@@ -122,3 +122,8 @@
 .invoice-btn{
     margin-top: 42px !important;
 }
+
+
+.search-input{
+    width: fit-content !important;
+}
