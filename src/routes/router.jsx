@@ -28,7 +28,6 @@ import AssetDashboard from "../pages/dashboard/asset-dashboard/AssetDashboard";
 import Purchase from "../pages/store-managment/purchase/Purchase";
 import ManagePurchase from "../pages/store-managment/purchase/ManagePurchase";
 import ExpensesManagement from "../pages/Expenses/ExpensesManagement";
-import ExampleTable from "../components/table/ExampleTable";
 
 
 // Creating the router configuration for the application
@@ -47,7 +46,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/asset-dashboard", // Asset Dashboard
-                element: <AssetDashboard />,
+                element: <AssetDashboard/>,
             },
             {
                 path: "/expense-dashboard", // Expense Dashboard
@@ -64,7 +63,7 @@ export const router = createBrowserRouter([
             {
                 path: "/manage-product", // Manage Product Page
 
-                element: <ExampleTable />,
+                element: <ProductManagement />,
             },
             {
                 path: "/category", // Product Category Page
