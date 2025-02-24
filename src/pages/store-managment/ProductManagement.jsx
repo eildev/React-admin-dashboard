@@ -1,24 +1,44 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
+// import $ from 'jquery';
+
+// import 'datatables.net-responsive-dt';
+
+// import 'datatables.net-dt/js/dataTables.dataTables.js'; 
+
+// import 'datatables.net';
+// import 'datatables.net-dt';
+
+
 import $ from 'jquery';
+import 'datatables.net-dt/js/dataTables.dataTables.js';
 
-import 'datatables.net-responsive-dt'; 
-
-import dt from 'datatables.net';
-
-dt(window, $);
+import 'datatables.net-dt/css/dataTables.dataTables.css';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Link } from 'react-router-dom';
 
 const ProductManagement = () => {
     useEffect(() => {
-        const table = $('#dataTable').DataTable({
-            pageLength: 10,
-        });
-        console.log('DataTable initialized');
-        return () => {
-            table.destroy(true);
-        };
+        if (typeof $ !== 'undefined') {
+            console.log('jQuery is loaded');
+            const table = $('#dataTable').DataTable({
+                pageLength: 10,
+            });
+            console.log(table);
+            return () => {
+                table.destroy(true);
+            };
+        } else {
+            console.error('jQuery is not loaded');
+        }
+
+        // const table = $('#dataTable').DataTable({
+        //     pageLength: 10,
+        // });
+        // console.log('DataTable initialized');
+        // return () => {
+        //     table.destroy(true);
+        // };
     }, []);
     return (
         <div className="card basic-data-table">

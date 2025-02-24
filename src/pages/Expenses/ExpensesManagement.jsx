@@ -191,7 +191,7 @@ const ExpensesManagement = () => {
                                     <label className="form-label">Description</label>
                                     <textarea rows={3} className="form-control" placeholder="Enter Description"></textarea>
                                 </div>
-                                <button type="submit" className="btn btn-primary-600 me-10 col-1">
+                                <button type="submit" className="btn btn-primary-600 me-10 col-md-1">
                                         Save
                                     </button>
                                 {/* <div className="col-12">
