@@ -166,7 +166,7 @@ const DynamicTable = ({ columns, data }) => {
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            <i className="fas fa-chevron-left"></i> <span className="">Previous</span>
+            <i className="fas fa-chevron-left"></i> <span className="">Prev</span>
           </button>
 
           {/* Page Numbers */}

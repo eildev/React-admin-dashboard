@@ -788,20 +788,7 @@ export const mockProducts = [
         price: 19.99,
         stock: 100,
     },
-    {
-        id: 4,
-        name: "Product D",
-        category: "Electronics",
-        price: 599.99,
-        stock: 5,
-    },
-    {
-        id: 5,
-        name: "Product E",
-        category: "Toys",
-        price: 29.99,
-        stock: 50,
-    },
+
     // Add more products as needed
 ];
 
