@@ -70,6 +70,34 @@ const DynamicTable = ({ columns, data }) => {
     toast.success('Table copied to clipboard!');
   };
 
+  const { pageIndex } = table.getState().pagination;
+  const pageCount = table.getPageCount();
+
+  const maxVisiblePages = 5; // Maximum number of pages to show
+  const getPageNumbers = () => {
+    let pages = [];
+
+    if (pageCount <= maxVisiblePages) {
+      // If total pages are within limit, show all
+      for (let i = 1; i <= pageCount; i++) {
+        pages.push(i);
+      }
+    } else {
+      const left = Math.max(1, pageIndex - 1);
+      const right = Math.min(pageCount, pageIndex + 3);
+
+      if (left > 1) pages.push(1, "..."); // First page + dots
+      for (let i = left; i <= right; i++) {
+        pages.push(i);
+      }
+      if (right < pageCount) pages.push("...", pageCount); // Dots + last page
+    }
+
+    return pages;
+  };
+
+
+
   return (
     <div className="card basic-data-table">
       <div className="card-header">
@@ -77,6 +105,7 @@ const DynamicTable = ({ columns, data }) => {
       </div>
       <div className="card-body">
         <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+          {/* Search Input */}
           <input
             type="text"
             placeholder="Search..."
@@ -130,25 +159,41 @@ const DynamicTable = ({ columns, data }) => {
             </tbody>
           </table>
         </div>
-        <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+        <div className="d-flex flex-wrap justify-content-center align-items-center gap-2 mt-3">
+          {/* Previous Button */}
           <button
-            className="btn btn-primary"
+            className="btn btn-primary px-3 py-1"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            <i className="fas fa-chevron-left"></i> Previous
+            <i className="fas fa-chevron-left"></i> <span className="">Previous</span>
           </button>
-          <span className="fw-bold">
-            Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
-          </span>
+
+          {/* Page Numbers */}
+          {getPageNumbers().map((page, index) =>
+            page === "..." ? (
+              <span key={index} className="fw-bold px-2">...</span>
+            ) : (
+              <button
+                key={index}
+                className={`btn ${page === pageIndex + 1 ? "btn-primary" : "btn-light"} px-3 py-1`}
+                onClick={() => table.setPageIndex(page - 1)}
+              >
+                {page}
+              </button>
+            )
+          )}
+
+          {/* Next Button */}
           <button
-            className="btn btn-primary"
+            className="btn btn-primary px-3 py-1"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
-            Next <i className="fas fa-chevron-right"></i>
+            <span className="">Next</span> <i className="fas fa-chevron-right"></i>
           </button>
         </div>
+
       </div>
     </div>
   );
