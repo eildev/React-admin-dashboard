@@ -82,6 +82,79 @@ const SaleDashboard = () => {
             </form>
 
 
+            <div className="row">
+                <div className="col-lg-8 mt-20">
+                    <div className="card">
+                        {/* Card Header */}
+                        <div className="card-header">
+                            <h5 className="card-title mb-0">Invoice</h5>
+                        </div>
+
+                        {/* Card Body */}
+                        <div className="card-body">
+                            <div className="row g-3"> {/* 🔥 Added g-3 for proper gap between columns */}
+
+                                {/* Invoice Info - Product Total, Subtotal, Total Due */}
+                                <div className="col-lg-4 col-md-6 mb-10">
+                                    <span>Product Total :</span> <span>99999.00</span>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <span>Sub Total :</span> <span>99999.00</span>
+                                </div>
+                                <div className="col-lg-4 col-md-12">
+                                    <span>Total Due :</span> <span>99999.00</span>
+                                </div>
+
+                                {/* Discount Input */}
+                                <div className="col-lg-3 col-md-6">
+                                    <span>Discount</span>
+                                    <input type="number" className="form-control" />
+                                </div>
+
+                                {/* Pay Amount Input */}
+                                <div className="col-lg-3 col-md-6">
+                                    <span>Pay Amount</span>
+                                    <input type="number" className="form-control" />
+                                </div>
+
+                                {/* Transaction Method */}
+                                <div className="col-lg-3 col-md-6">
+                                    <span>Transaction Method <span className="text-danger">*</span></span>
+                                    <select className="form-select">
+                                        <option>Select Product</option>
+                                        <option value="UK">UK</option>
+                                        <option value="BD">BD</option>
+                                        <option value="EU">EU</option>
+                                    </select>
+                                </div>
+
+                                {/* Generate Invoice Button */}
+                                <div className="col-lg-3 col-md-6 invoice-btn">
+                                    <button className="btn btn-primary w-100">
+                                        <FaFileInvoiceDollar className="mb-1" /> Generate Invoice
+                                    </button>
+                                </div>
+
+                            </div> {/* End Row */}
+                        </div> {/* End Card Body */}
+                    </div> {/* End Card */}
+                </div>
+                <div className="col-lg-4 mt-20">
+                    <div className="card">
+                        <div className="card-header">
+                            <h5 className="card-title mb-0">Customer Details</h5>
+                        </div>
+                        <div className="card-body">
+                            <div>
+                                <h5 className="customar-info"><span>Customer Name :</span> <span>Fardus Hassan Bappy</span></h5>
+                                <h5 className="customar-info"><span>Customer Phone :</span><span>+880 1722092675</span></h5>
+                                <h5 className="customar-info"><span>Previous Due :</span><span>50000.00</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="col-lg-12 mt-20">
                 <div className="card h-100">
                     <div className="card-header">
@@ -162,78 +235,7 @@ const SaleDashboard = () => {
                 </div>
             </div>
 
-            <div className="row">
-            <div className="col-lg-8 mt-20">
-          <div className="card">
-            {/* Card Header */}
-            <div className="card-header">
-              <h5 className="card-title mb-0">Invoice</h5>
-            </div>
-
-            {/* Card Body */}
-            <div className="card-body">
-              <div className="row g-3"> {/* 🔥 Added g-3 for proper gap between columns */}
-
-                {/* Invoice Info - Product Total, Subtotal, Total Due */}
-                <div className="col-lg-4 col-md-6 mb-10">
-                  <span>Product Total :</span> <span>99999.00</span>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                  <span>Sub Total :</span> <span>99999.00</span>
-                </div>
-                <div className="col-lg-4 col-md-12">
-                  <span>Total Due :</span> <span>99999.00</span>
-                </div>
-
-                {/* Discount Input */}
-                <div className="col-lg-3 col-md-6">
-                  <span>Discount</span>
-                  <input type="number" className="form-control" />
-                </div>
-
-                {/* Pay Amount Input */}
-                <div className="col-lg-3 col-md-6">
-                  <span>Pay Amount</span>
-                  <input type="number" className="form-control" />
-                </div>
-
-                {/* Transaction Method */}
-                <div className="col-lg-3 col-md-6">
-                  <span>Transaction Method <span className="text-danger">*</span></span>
-                  <select className="form-select">
-                    <option>Select Product</option>
-                    <option value="UK">UK</option>
-                    <option value="BD">BD</option>
-                    <option value="EU">EU</option>
-                  </select>
-                </div>
-
-                {/* Generate Invoice Button */}
-                <div className="col-lg-3 col-md-6 invoice-btn">
-                  <button className="btn btn-primary w-100">
-                    <FaFileInvoiceDollar className="mb-1" /> Generate Invoice
-                  </button>
-                </div>
-
-              </div> {/* End Row */}
-            </div> {/* End Card Body */}
-          </div> {/* End Card */}
-        </div>
-                <div className="col-lg-4 mt-20">
-                    <div className="card">
-                        <div className="card-header">
-                            <h5 className="card-title mb-0">Customer Details</h5>
-                        </div>
-                        <div className="card-body">
-                            <div>
-                                <h5 className="customar-info"><span>Customer Name :</span> <span>Fardus Hassan Bappy</span></h5>
-                                <h5 className="customar-info"><span>Customer Phone :</span><span>+880 1722092675</span></h5>
-                                <h5 className="customar-info"><span>Previous Due :</span><span>50000.00</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </>
     );
 };
