@@ -1,10 +1,11 @@
 // Importing necessary modules and components
-import React, { useEffect, useState } from "react"; // React hooks for state and effect
+import { useEffect, useState } from "react"; // React hooks for state and effect
 import { Outlet, useLocation } from "react-router-dom"; // Outlet for nested routes and useLocation for route tracking
 import Footer from "./Footer"; // Footer component for the page
 import Sidebar from "./Sidebar"; // Sidebar component
 import Navbar from "./Navbar"; // Navbar component
 import RouteScrollToTop from "../helper/RouteScrollToTop"; // Custom hook to scroll to top on route change
+import { ToastContainer } from "react-toastify";
 
 // MainLayouts functional component for the main layout structure
 const MainLayouts = () => {
@@ -84,6 +85,18 @@ const MainLayouts = () => {
 
     return (
         <>
+            {/* react toastr container  */}
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={true}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
             {/* Scroll to top on route change */}
             <RouteScrollToTop />
             <section className={mobileMenu ? "overlay active" : "overlay "}>
