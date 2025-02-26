@@ -8,7 +8,7 @@ import jsPDF from 'jspdf';
 import { useReactToPrint } from 'react-to-print';
 import { toast } from "react-toastify";
 
-const DynamicTable = ({ columns, data }) => {
+const DynamicTable = ({ columns, data, tableName }) => {
   const [globalFilter, setGlobalFilter] = useState("");
   const [sorting, setSorting] = useState([]);
   const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 10 });
@@ -101,7 +101,7 @@ const DynamicTable = ({ columns, data }) => {
   return (
     <div className="card basic-data-table">
       <div className="card-header">
-        <h5 className="card-title mb-0">Product Table</h5>
+        <h5 className="card-title mb-0">{tableName}</h5>
       </div>
       <div className="card-body">
         <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">

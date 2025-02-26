@@ -1,9 +1,11 @@
 import Breadcrumb from "../../../components/breadcrumb/Breadcrumb";
+import DynamicTable from "../../../components/table/DynamicTable";
+import { columns, mockProducts } from "../../../data/data";
 
 const ManagePurchase = () => {
     return (
         <>
-            <Breadcrumb section="Store Management" title="Manage Purchase" />
+            <Breadcrumb section="Purchase Report" title="Manage Purchase" />
             {/* <h5>Manage Purchase</h5> */}
             <form action="" className="mb-20">
         <div className="col-lg-12">
@@ -60,6 +62,7 @@ const ManagePurchase = () => {
           </div>
         </div>
       </form>
+      <DynamicTable columns={columns} data={mockProducts} tableName={'Purchase Table'} />
         </>
     );
 };

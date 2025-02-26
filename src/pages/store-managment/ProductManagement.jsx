@@ -8,7 +8,7 @@ const ProductManagement = () => {
       <Breadcrumb section="Store Management" title="Product Management" />
       {/* <h5>Manage Products</h5> */}
       
-      <DynamicTable columns={columns} data={mockProducts} />
+      <DynamicTable columns={columns} data={mockProducts} tableName={'Product Table'} />
     </>
   );
 };
