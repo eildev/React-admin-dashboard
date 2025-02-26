@@ -65,6 +65,13 @@
     max-width: 280px;
 }
 
+.purchase_img {
+    font-size: 16px !important;
+    text-wrap: nowrap !important;
+    padding: 5px 0 0px 10px !important;
+    max-height: 45px !important;
+}
+
 .variation_plus{
     font-size: 30px;
     cursor: pointer;
@@ -126,4 +133,12 @@
 
 .search-input{
     width: fit-content !important;
+}
+
+.qty{
+    max-width: 50px !important;
+}
+
+.modal-title{
+    font-size: 20px !important;
 }
