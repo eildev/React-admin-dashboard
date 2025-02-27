@@ -49,7 +49,8 @@ export const router = createBrowserRouter([
       },
       {
         path: "/expense-dashboard", // Expense Dashboard
-        element: <ExpenseDashboard />,
+        // element: <ExpenseDashboard />,
+        element: <ExpensesManagement />,
       },
       {
         path: "/payroll-dashboard", // Payroll Dashboard
@@ -135,10 +136,10 @@ export const router = createBrowserRouter([
         path: "/manage-purchase", // Salary Sheet Page
         element: <ManagePurchase />,
       },
-      {
-        path: "/expenses",
-        element: <ExpensesManagement></ExpensesManagement>,
-      },
+      // {
+      //   path: "/expenses",
+      //   element: <ExpensesManagement></ExpensesManagement>,
+      // },
     ],
   },
 ]);
