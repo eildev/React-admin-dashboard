@@ -34,14 +34,14 @@ const AddProduct = () => {
 
 
 
-    const [variations, setVariations] = useState([{ id: Date.now() }]); // প্রাথমিকভাবে একটি variation দিয়ে শুরু
+    const [variations, setVariations] = useState([{ id: Date.now() }]); 
 
     const addVariation = () => {
-      setVariations([...variations, { id: Date.now() }]); // নতুন variation যোগ করা
+      setVariations([...variations, { id: Date.now() }]); 
     };
   
     const deleteVariation = (id) => {
-      setVariations(variations.filter(variation => variation.id !== id)); // নির্দিষ্ট variation মুছে ফেলা
+      setVariations(variations.filter(variation => variation.id !== id)); 
     };
 
     return (
@@ -314,7 +314,7 @@ const AddProduct = () => {
                           {variations.map(variation => (
                             <tr key={variation.id}>
                               <td>
-                                <RiDeleteBin6Line className="variation_delete" onClick={() => deleteVariation(variation.id)} /> {/* নির্দিষ্ট variation মুছে ফেলার জন্য */}
+                                <RiDeleteBin6Line className="variation_delete" onClick={() => deleteVariation(variation.id)} /> 
                               </td>
                               <td>
                                 <input
@@ -391,6 +391,11 @@ const AddProduct = () => {
                           ))}
                         </tbody>
                       </table>
+
+
+
+
+                      
                     </div>
                   </div>
                 </div>

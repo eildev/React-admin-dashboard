@@ -6,6 +6,44 @@ export const mockProducts = [
         price: 299.99,
         stock: 10,
     },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
     {
         id: 2,
         name: "Product B",
@@ -41,6 +79,44 @@ export const mockProducts = [
         price: 299.99,
         stock: 10,
     },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
     {
         id: 2,
         name: "Product B",
@@ -76,6 +152,44 @@ export const mockProducts = [
         price: 299.99,
         stock: 10,
     },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
     {
         id: 2,
         name: "Product B",
@@ -111,6 +225,44 @@ export const mockProducts = [
         price: 299.99,
         stock: 10,
     },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
     {
         id: 2,
         name: "Product B",
@@ -146,6 +298,44 @@ export const mockProducts = [
         price: 299.99,
         stock: 10,
     },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
     {
         id: 2,
         name: "Product B",
@@ -174,6 +364,431 @@ export const mockProducts = [
         price: 29.99,
         stock: 50,
     },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 5,
+        name: "Product E",
+        category: "Toys",
+        price: 29.99,
+        stock: 50,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 5,
+        name: "Product E",
+        category: "Toys",
+        price: 29.99,
+        stock: 50,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 5,
+        name: "Product E",
+        category: "Toys",
+        price: 29.99,
+        stock: 50,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 5,
+        name: "Product E",
+        category: "Toys",
+        price: 29.99,
+        stock: 50,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 5,
+        name: "Product E",
+        category: "Toys",
+        price: 29.99,
+        stock: 50,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+    {
+        id: 4,
+        name: "Product D",
+        category: "Electronics",
+        price: 599.99,
+        stock: 5,
+    },
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+    
+    {
+        id: 1,
+        name: "Product A",
+        category: "Electronics",
+        price: 299.99,
+        stock: 10,
+    },
+   
+    {
+        id: 2,
+        name: "Product B",
+        category: "Home & Kitchen",
+        price: 49.99,
+        stock: 25,
+    },
+    {
+        id: 3,
+        name: "Product C",
+        category: "Books",
+        price: 19.99,
+        stock: 100,
+    },
+
     // Add more products as needed
 ];
 
