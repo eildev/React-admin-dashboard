@@ -1,11 +1,24 @@
-import { useReactTable, getCoreRowModel, getPaginationRowModel, getSortedRowModel, getFilteredRowModel } from "@tanstack/react-table";
+import {
+  useReactTable,
+  getCoreRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  getFilteredRowModel,
+} from "@tanstack/react-table";
 import { useRef, useState, useEffect } from "react";
-import { FaCopy, FaFileCsv, FaFileExcel, FaFilePdf, FaPlus, FaPrint } from "react-icons/fa";
-import { CSVLink } from 'react-csv';
-import * as XLSX from 'xlsx';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
-import { useReactToPrint } from 'react-to-print';
+import {
+  FaCopy,
+  FaFileCsv,
+  FaFileExcel,
+  FaFilePdf,
+  FaPlus,
+  FaPrint,
+} from "react-icons/fa";
+import { CSVLink } from "react-csv";
+import * as XLSX from "xlsx";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import { useReactToPrint } from "react-to-print";
 import { toast } from "react-toastify";
 
 const DynamicTable = ({ columns, data, tableName }) => {
@@ -37,14 +50,14 @@ const DynamicTable = ({ columns, data, tableName }) => {
   });
 
   const exportToPDF = () => {
-    const input = document.querySelector('.bordered-table');
+    const input = document.querySelector(".bordered-table");
     html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'mm', 'a4');
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
       const imgWidth = 210;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-      pdf.save('table.pdf');
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("table.pdf");
     });
   };
 
@@ -55,19 +68,19 @@ const DynamicTable = ({ columns, data, tableName }) => {
   const exportToExcel = () => {
     const ws = XLSX.utils.json_to_sheet(data);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-    XLSX.writeFile(wb, 'table.xlsx');
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    XLSX.writeFile(wb, "table.xlsx");
   };
 
   const copyToClipboard = () => {
-    const table = document.querySelector('.bordered-table');
+    const table = document.querySelector(".bordered-table");
     const range = document.createRange();
     range.selectNode(table);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges();
-    toast.success('Table copied to clipboard!');
+    toast.success("Table copied to clipboard!");
   };
 
   const { pageIndex } = table.getState().pagination;
@@ -96,8 +109,6 @@ const DynamicTable = ({ columns, data, tableName }) => {
     return pages;
   };
 
-
-
   return (
     <div className="card basic-data-table">
       <div className="card-header">
@@ -114,19 +125,35 @@ const DynamicTable = ({ columns, data, tableName }) => {
             onChange={(e) => setGlobalFilter(e.target.value)}
           />
           <div className="d-flex flex-wrap gap-2">
-            <button className="btn btn-outline-primary d-flex align-items-center gap-2" onClick={copyToClipboard}>
+            <button
+              className="btn btn-outline-primary d-flex align-items-center gap-2"
+              onClick={copyToClipboard}
+            >
               <FaCopy /> Copy
             </button>
-            <button className="btn btn-outline-success d-flex align-items-center gap-2" onClick={exportToExcel}>
+            <button
+              className="btn btn-outline-success d-flex align-items-center gap-2"
+              onClick={exportToExcel}
+            >
               <FaFileExcel /> Excel
             </button>
-            <CSVLink data={data} filename={"table.csv"} className="btn btn-outline-info d-flex align-items-center gap-2">
+            <CSVLink
+              data={data}
+              filename={"table.csv"}
+              className="btn btn-outline-info d-flex align-items-center gap-2"
+            >
               <FaFileCsv /> CSV
             </CSVLink>
-            <button className="btn btn-outline-danger d-flex align-items-center gap-2" onClick={exportToPDF}>
+            <button
+              className="btn btn-outline-danger d-flex align-items-center gap-2"
+              onClick={exportToPDF}
+            >
               <FaFilePdf /> PDF
             </button>
-            <button className="btn btn-outline-secondary d-flex align-items-center gap-2" onClick={() => handlePrint()}>
+            <button
+              className="btn btn-outline-secondary d-flex align-items-center gap-2"
+              onClick={() => handlePrint()}
+            >
               <FaPrint /> Print
             </button>
             <button className="btn btn-primary d-flex align-items-center gap-2">
@@ -134,13 +161,18 @@ const DynamicTable = ({ columns, data, tableName }) => {
             </button>
           </div>
         </div>
-        <div className="overflow-x-auto" ref={tableRef}> {/* Attach ref here */}
+        <div className="overflow-x-auto" ref={tableRef}>
+          {" "}
+          {/* Attach ref here */}
           <table className="table bordered-table mb-0">
             <thead>
               {table.getHeaderGroups().map((headerGroup, index) => (
                 <tr key={index}>
                   {headerGroup.headers.map((header) => (
-                    <th key={header.id} onClick={header.column.getToggleSortingHandler()}>
+                    <th
+                      key={header.id}
+                      onClick={header.column.getToggleSortingHandler()}
+                    >
                       {header.column.columnDef.header}{" "}
                       {header.column.getIsSorted() === "desc" ? "🔽" : "🔼"}
                     </th>
@@ -166,17 +198,22 @@ const DynamicTable = ({ columns, data, tableName }) => {
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            <i className="fas fa-chevron-left"></i> <span className="">Prev</span>
+            <i className="fas fa-chevron-left"></i>{" "}
+            <span className="">Prev</span>
           </button>
 
           {/* Page Numbers */}
           {getPageNumbers().map((page, index) =>
             page === "..." ? (
-              <span key={index} className="fw-bold px-2">...</span>
+              <span key={index} className="fw-bold px-2">
+                ...
+              </span>
             ) : (
               <button
                 key={index}
-                className={`btn ${page === pageIndex + 1 ? "btn-primary" : "btn-light"} px-3 py-1`}
+                className={`btn ${
+                  page === pageIndex + 1 ? "btn-primary" : "btn-light"
+                } px-3 py-1`}
                 onClick={() => table.setPageIndex(page - 1)}
               >
                 {page}
@@ -190,10 +227,10 @@ const DynamicTable = ({ columns, data, tableName }) => {
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
-            <span className="">Next</span> <i className="fas fa-chevron-right"></i>
+            <span className="">Next</span>{" "}
+            <i className="fas fa-chevron-right"></i>
           </button>
         </div>
-
       </div>
     </div>
   );
