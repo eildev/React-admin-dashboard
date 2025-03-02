@@ -7,6 +7,8 @@ import {
 } from "@tanstack/react-table";
 import { useRef, useState, useEffect } from "react";
 import {
+  FaCaretDown,
+  FaCaretUp,
   FaCopy,
   FaFileCsv,
   FaFileExcel,
@@ -174,7 +176,7 @@ const DynamicTable = ({ columns, data, tableName }) => {
                       onClick={header.column.getToggleSortingHandler()}
                     >
                       {header.column.columnDef.header}{" "}
-                      {header.column.getIsSorted() === "desc" ? "🔽" : "🔼"}
+                      {header.column.getIsSorted() === "desc" ? <FaCaretDown className="tableIcon"/> : <FaCaretUp className="tableIcon"/>}
                     </th>
                   ))}
                 </tr>
