@@ -6,7 +6,14 @@ import {
   getFilteredRowModel,
 } from "@tanstack/react-table";
 import { useState } from "react";
-import { FaCopy, FaFileCsv, FaFileExcel, FaFilePdf, FaPlus, FaPrint } from "react-icons/fa";
+import {
+  FaCopy,
+  FaFileCsv,
+  FaFileExcel,
+  FaFilePdf,
+  FaPlus,
+  FaPrint,
+} from "react-icons/fa";
 
 const DynamicTable = ({ columns, data }) => {
   const [globalFilter, setGlobalFilter] = useState("");
@@ -36,38 +43,38 @@ const DynamicTable = ({ columns, data }) => {
         <h5 className="card-title mb-0">Product Table</h5>
       </div>
       <div className="card-body">
-      <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
-  {/* Search Input */}
-  <input
-    type="text"
-    placeholder="Search..."
-    className="form-control search-input"
-    value={globalFilter}
-    onChange={(e) => setGlobalFilter(e.target.value)}
-  />
+        <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-3">
+          {/* Search Input */}
+          <input
+            type="text"
+            placeholder="Search..."
+            className="form-control search-input"
+            value={globalFilter}
+            onChange={(e) => setGlobalFilter(e.target.value)}
+          />
 
-  {/* Buttons Group */}
-  <div className="d-flex flex-wrap gap-2">
-    <button className="btn btn-outline-primary d-flex align-items-center gap-2">
-      <FaCopy /> Copy
-    </button>
-    <button className="btn btn-outline-success d-flex align-items-center gap-2">
-      <FaFileExcel /> Excel
-    </button>
-    <button className="btn btn-outline-info d-flex align-items-center gap-2">
-      <FaFileCsv /> CSV
-    </button>
-    <button className="btn btn-outline-danger d-flex align-items-center gap-2">
-      <FaFilePdf /> PDF
-    </button>
-    <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
-      <FaPrint /> Print
-    </button>
-    <button className="btn btn-primary d-flex align-items-center gap-2">
-      <FaPlus /> Add Product
-    </button>
-  </div>
-</div>
+          {/* Buttons Group */}
+          <div className="d-flex flex-wrap gap-2">
+            <button className="btn btn-outline-primary d-flex align-items-center gap-2">
+              <FaCopy /> Copy
+            </button>
+            <button className="btn btn-outline-success d-flex align-items-center gap-2">
+              <FaFileExcel /> Excel
+            </button>
+            <button className="btn btn-outline-info d-flex align-items-center gap-2">
+              <FaFileCsv /> CSV
+            </button>
+            <button className="btn btn-outline-danger d-flex align-items-center gap-2">
+              <FaFilePdf /> PDF
+            </button>
+            <button className="btn btn-outline-secondary d-flex align-items-center gap-2">
+              <FaPrint /> Print
+            </button>
+            <button className="btn btn-primary d-flex align-items-center gap-2">
+              <FaPlus /> Add Product
+            </button>
+          </div>
+        </div>
 
         <div className=" overflow-x-auto">
           <table className="table bordered-table mb-0">
@@ -107,7 +114,8 @@ const DynamicTable = ({ columns, data }) => {
           </button>
 
           <span className="fw-bold">
-            Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
+            Page {table.getState().pagination.pageIndex + 1} of{" "}
+            {table.getPageCount()}
           </span>
 
           <button
@@ -118,7 +126,6 @@ const DynamicTable = ({ columns, data }) => {
             Next <i className="fas fa-chevron-right"></i>
           </button>
         </div>
-
       </div>
     </div>
   );
