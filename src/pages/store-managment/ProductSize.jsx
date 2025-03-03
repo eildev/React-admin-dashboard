@@ -21,7 +21,7 @@ const ProductSize = () => {
             <DynamicTable columns={columns} data={mockProducts} tableName={'Brand Table'} />
             <Modal size="md" show={showModal} onHide={() => setShowModal(false)} centered>
                 <Modal.Header closeButton>
-                    <h3 className="modal-title">Add Unit</h3>
+                    <h3 className="modal-title">Add Product Size</h3>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row g-3">
