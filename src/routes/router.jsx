@@ -140,6 +140,62 @@ export const router = createBrowserRouter([
       //   path: "/expenses",
       //   element: <ExpensesManagement></ExpensesManagement>,
       // },
+      {
+        path: "/today-report",
+        element: <h1>/today-report</h1>,
+      },
+      {
+        path: "/product-info-report",
+        element: <h1>/product-info-report</h1>,
+      },
+      {
+        path: "/customar-due-report",
+        element: <h1>/customar-due-report</h1>,
+      },
+      {
+        path: "/Supplier-due-report",
+        element: <h1>/Supplier-due-report</h1>,
+      },
+      {
+        path: "/top-products",
+        element: <h1>/top-products</h1>,
+      },
+      {
+        path: "/purchase-report",
+        element: <h1>/purchase-report</h1>,
+      },
+      {
+        path: "/customart-ledger",
+        element: <h1>/customart-ledger</h1>,
+      },
+      {
+        path: "/supplier-ledger",
+        element: <h1>/supplier-ledger</h1>,
+      },
+      {
+        path: "/account-transaction",
+        element: <h1>/account-transaction</h1>,
+      },
+      {
+        path: "/expense-report",
+        element: <h1>/expense-report</h1>,
+      },
+      {
+        path: "/employee-salary-report",
+        element: <h1>/employee-salary-report</h1>,
+      },
+      {
+        path: "/sms-report",
+        element: <h1>/sms-report</h1>,
+      },
+      {
+        path: "/monthly-report",
+        element: <h1>/monthly-report</h1>,
+      },
+      {
+        path: "/yearly-report",
+        element: <h1>/yearly-report</h1>,
+      },
     ],
   },
 ]);
