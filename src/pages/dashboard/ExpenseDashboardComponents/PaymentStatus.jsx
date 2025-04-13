@@ -2,7 +2,7 @@
 
 const PaymentStatus = () => {
   return (
-    <div className='card col-3 radius-16 mt-24'>
+    <div className='card radius-16 mt-24'>
       <div className='card-header'>
         <div className='d-flex align-items-center flex-wrap gap-2 justify-content-between'>
           <h6 className='mb-2 fw-bold text-lg mb-0'>Investment</h6>
@@ -22,25 +22,25 @@ const PaymentStatus = () => {
         <div className='mt-40 mb-24 text-center pe-110 position-relative max-w-288-px mx-auto'>
           <div className='w-170-px h-170-px rounded-circle z-1 position-relative d-inline-flex justify-content-center align-items-center border border-white border-width-2-px'>
             <img
-              src='https://www.imgcorporations.com/images/bg-img.jpg'
+              src='assets/images/home-eleven/bg/radial-bg1.png'
               alt=''
-              className='position-absolute top-0 start-0 z-n1 w-100 h-100 object-fit-cover rounded-circle'
+              className='position-absolute top-0 start-0 z-n1 w-100 h-100 object-fit-cover'
             />
             <h5 className='text-white'> 60% </h5>
           </div>
           <div className='w-144-px h-144-px rounded-circle z-1 position-relative d-inline-flex justify-content-center align-items-center border border-white border-width-3-px position-absolute top-0 end-0 mt--36'>
             <img
-              src='https://www.imgcorporations.com/images/bg-img.jpg'
+              src='assets/images/home-eleven/bg/radial-bg2.png'
               alt=''
-              className='position-absolute top-0 start-0 z-n1 w-100 h-100 object-fit-cover rounded-circle'
+              className='position-absolute top-0 start-0 z-n1 w-100 h-100 object-fit-cover'
             />
             <h5 className='text-white'> 30% </h5>
           </div>
           <div className='w-110-px h-110-px rounded-circle z-1 position-relative d-inline-flex justify-content-center align-items-center border border-white border-width-3-px position-absolute bottom-0 start-50 translate-middle-x ms-48'>
             <img
-              src='https://www.imgcorporations.com/images/bg-img.jpg'
+              src='assets/images/home-eleven/bg/radial-bg3.png'
               alt=''
-              className='position-absolute top-0 start-0 z-n1 w-100 h-100 object-fit-cover rounded-circle rounded-circle'
+              className='position-absolute top-0 start-0 z-n1 w-100 h-100 object-fit-cover'
             />
             <h5 className='text-white'> 10% </h5>
           </div>

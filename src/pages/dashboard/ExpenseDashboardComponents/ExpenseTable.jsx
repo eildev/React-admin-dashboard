@@ -1,13 +1,39 @@
-
+import { useState } from "react";
 
 const ExpenseTable = () => {
+    const tableData = [
+        { category: "Gold", transactions: "2 Months", date: "27 / 10 /2024", amount: "$365" },
+        { category: "Dollars", transactions: "3 Months", date: "27 / 10 /2024", amount: "$365" },
+        { category: "Stock Market", transactions: "1 Months", date: "27 / 10 /2024", amount: "$365" },
+        { category: "Dimond", transactions: "5 Months", date: "27 / 10 /2024", amount: "$365" },
+        { category: "S&P 500", transactions: "4 Months", date: "27 / 10 /2024", amount: "$365" },
+        { category: "Crypto", transactions: "6 Months", date: "27 / 10 /2024", amount: "$500" },
+        { category: "NFTs", transactions: "7 Months", date: "27 / 10 /2024", amount: "$800" },
+        { category: "Real Estate", transactions: "8 Months", date: "27 / 10 /2024", amount: "$1200" },
+        { category: "Mutual Funds", transactions: "9 Months", date: "27 / 10 /2024", amount: "$650" },
+    ];
+
+    const itemsPerPage = 5;
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const totalPages = Math.ceil(tableData.length / itemsPerPage);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = tableData.slice(indexOfFirstItem, indexOfLastItem);
+
+    const handlePageChange = (pageNumber) => {
+        if (pageNumber >= 1 && pageNumber <= totalPages) {
+            setCurrentPage(pageNumber);
+        }
+    };
+
     return (
         <div className="col-12">
             <div className="card h-100">
                 <div className="card-body p-24">
                     <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between mb-20">
-                        <h6 className="mb-2 fw-bold text-lg">Project Status</h6>
-                        <div className="">
+                        <h6 className="mb-2 fw-bold text-lg">Last Month Activities</h6>
+                        <div>
                             <select className="form-select form-select-sm w-auto bg-base border text-secondary-light" defaultValue="Yearly">
                                 <option value="Yearly">Yearly</option>
                                 <option value="Monthly">Monthly</option>
@@ -16,154 +42,57 @@ const ExpenseTable = () => {
                             </select>
                         </div>
                     </div>
+
                     <div className="table-responsive scroll-sm">
                         <table className="table sm-table bordered-table mb-0">
                             <thead>
                                 <tr>
-                                    <th scope="col">categories Names</th>
+                                    <th scope="col">Categories Names</th>
                                     <th scope="col">Transactions</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Amount</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Gold</td>
-                                    <td>2 Months</td>
-                                    <td></td>
-                                    <td>
-                                        <div className="max-w-112 mx-auto">
-                                            <div className="w-100">
-                                                <div
-                                                    className="progress progress-sm rounded-pill"
-                                                    role="progressbar"
-                                                    aria-label="Success example"
-                                                    aria-valuenow={25}
-                                                    aria-valuemin={0}
-                                                    aria-valuemax={100}
-                                                >
-                                                    <div
-                                                        className="progress-bar bg-red rounded-pill"
-                                                        style={{ width: "30%" }}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <span className="mt-8 text-secondary-light text-sm fw-medium">
-                                                30%
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Dollars</td>
-                                    <td>3 Months</td>
-                                    <td></td>
-                                    <td>
-                                        <div className="max-w-112 mx-auto">
-                                            <div className="w-100">
-                                                <div
-                                                    className="progress progress-sm rounded-pill"
-                                                    role="progressbar"
-                                                    aria-label="Success example"
-                                                    aria-valuenow={25}
-                                                    aria-valuemin={0}
-                                                    aria-valuemax={100}
-                                                >
-                                                    <div
-                                                        className="progress-bar bg-warning-main rounded-pill"
-                                                        style={{ width: "50%" }}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <span className="mt-8 text-secondary-light text-sm fw-medium">
-                                                50%
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Stock Market</td>
-                                    <td>1 Months</td>
-                                    <td></td>
-                                    <td>
-                                        <div className="max-w-112 mx-auto">
-                                            <div className="w-100">
-                                                <div
-                                                    className="progress progress-sm rounded-pill"
-                                                    role="progressbar"
-                                                    aria-label="Success example"
-                                                    aria-valuenow={25}
-                                                    aria-valuemin={0}
-                                                    aria-valuemax={100}
-                                                >
-                                                    <div
-                                                        className="progress-bar bg-info-main rounded-pill"
-                                                        style={{ width: "60%" }}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <span className="mt-8 text-secondary-light text-sm fw-medium">
-                                                60%
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Dimond</td>
-                                    <td>5 Months</td>
-                                    <td></td>
-                                    <td>
-                                        <div className="max-w-112 mx-auto">
-                                            <div className="w-100">
-                                                <div
-                                                    className="progress progress-sm rounded-pill"
-                                                    role="progressbar"
-                                                    aria-label="Success example"
-                                                    aria-valuenow={25}
-                                                    aria-valuemin={0}
-                                                    aria-valuemax={100}
-                                                >
-                                                    <div
-                                                        className="progress-bar bg-success-main rounded-pill"
-                                                        style={{ width: "80%" }}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <span className="mt-8 text-secondary-light text-sm fw-medium">
-                                                80%
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>S&amp;P 500</td>
-                                    <td>4 Months</td>
-                                    <td></td>
-                                    <td>
-                                        <div className="max-w-112 mx-auto">
-                                            <div className="w-100">
-                                                <div
-                                                    className="progress progress-sm rounded-pill"
-                                                    role="progressbar"
-                                                    aria-label="Success example"
-                                                    aria-valuenow={25}
-                                                    aria-valuemin={0}
-                                                    aria-valuemax={100}
-                                                >
-                                                    <div
-                                                        className="progress-bar bg-red rounded-pill"
-                                                        style={{ width: "70%" }}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <span className="mt-8 text-secondary-light text-sm fw-medium">
-                                                70%
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
+                                {currentItems.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{item.category}</td>
+                                        <td>{item.transactions}</td>
+                                        <td>{item.date}</td>
+                                        <td>{item.amount}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
+                    </div>
+
+                    {/* Pagination */}
+                    <div className="d-flex justify-content-center mt-3 gap-2 flex-wrap">
+                        <button
+                            className="btn btn-sm btn-outline-secondary"
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                        >
+                            Prev
+                        </button>
+
+                        {Array.from({ length: totalPages }, (_, index) => (
+                            <button
+                                key={index}
+                                className={`btn btn-sm ${currentPage === index + 1 ? 'btn-primary' : 'btn-outline-secondary'}`}
+                                onClick={() => handlePageChange(index + 1)}
+                            >
+                                {index + 1}
+                            </button>
+                        ))}
+
+                        <button
+                            className="btn btn-sm btn-outline-secondary"
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                        >
+                            Next
+                        </button>
                     </div>
                 </div>
             </div>
