@@ -7,7 +7,7 @@ const OverallReport = () => {
     useReactApexChart();
   return (
         <div className='col-xxl-12 col-md-6'>
-      <div className='card h-100'>
+      <div className='card'>
         <div className='card-header'>
           <div className='d-flex align-items-center flex-wrap gap-2 justify-content-between'>
             <h6 className='mb-2 fw-bold text-lg'>Overall Report</h6>
@@ -19,8 +19,8 @@ const OverallReport = () => {
             </select>
           </div>
         </div>
-        <div className='card-body p-24'>
-          <div className='mt-32'>
+        <div className='card-body p-24 mt-40'>
+          <div className='mt-13'>
             <div
               id='userOverviewDonutChart'
               className='mx-auto apexcharts-tooltip-z-none'

@@ -3,8 +3,8 @@ import React from 'react';
 const ExpenseCart = () => {
     return (
         <div className='col-12 mb-20'>
-        <div className=' radius-12'>
-          <div className='card-body'>
+        <div className='card radius-12'>
+          <div className='gap-3'>
             <div className='row'>
               <div className='col-xxl-3 col-xl-4 col-sm-6' >
                 <div className='px-20 py-16 shadow-none radius-8 h-100 gradient-deep-1 left-line line-bg-primary position-relative overflow-hidden'>

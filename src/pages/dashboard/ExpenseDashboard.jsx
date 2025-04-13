@@ -13,12 +13,14 @@ const ExpenseDashboard = () => {
             <h5>Expense Dashboard</h5>
             <ExpenseCart></ExpenseCart>
             <MoneyFlowChart></MoneyFlowChart>
-            <div className="d-flex justify-content-center align-items-center  mt-20 mb-20" style={{ gap: "56px" }}>
+            <div className="row justify-contect-center align-item-center mt-3 mb-3">
 
-                    <PaymentStatus></PaymentStatus>
 
-                <div className="border">
+                <div className="col-lg-6">
                     <OverallReport></OverallReport>
+                </div>
+                <div className="col-lg-6">
+                    <PaymentStatus></PaymentStatus>
                 </div>
             </div>
             <ExpenseTable></ExpenseTable>

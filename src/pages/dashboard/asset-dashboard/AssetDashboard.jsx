@@ -7,9 +7,9 @@ import TotalLeisure from "./section/TotalLeisure";
 const AssetDashboard = () => {
     return (
         <>
-            <Breadcrumb section="Dashboard" title="Asset Dashboard" />
+            <Breadcrumb section="Assets" title="Asset Dashboard" />
             <AssetTopCard />
-            <div className="row gy-4 mt-1">
+            <div className="row gy-4">
                 <TotalLeisure />
                 <BankTransactionDetails />
             </div>
