@@ -9,8 +9,8 @@ import PaymentStatus from "./ExpenseDashboardComponents/PaymentStatus";
 const ExpenseDashboard = () => {
     return (
         <>
-            <Breadcrumb section="Dashboard" title="Expense Dashboard" />
-            <h5>Expense Dashboard</h5>
+            <Breadcrumb section="Expense" title="Expense" />
+            {/* <h5>Expense Dashboard</h5> */}
             <ExpenseCart></ExpenseCart>
             <MoneyFlowChart></MoneyFlowChart>
             <div className="row justify-contect-center align-item-center mt-3 mb-3">
