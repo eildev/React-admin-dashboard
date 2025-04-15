@@ -2,24 +2,29 @@ import { useState } from "react";
 import Breadcrumb from "../../components/breadcrumb/Breadcrumb";
 import { FaBarcode, FaFileInvoiceDollar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SalesChart from "./SaleDashboardComponents/SalesChart";
+import TotalRevenue from "./SaleDashboardComponents/TotalRevenue";
+import TopSelllingProducts from "./SaleDashboardComponents/TopSelllingProducts";
+import LowestSelllingProducts from "./SaleDashboardComponents/LowestSelllingProducts";
+import SalesSummery from "./SaleDashboardComponents/SalesSummery";
 
 
 const SaleDashboard = () => {
-    const [barcode, setBarcode] = useState("");
+    // const [barcode, setBarcode] = useState("");
 
-    const handleInputChange = (e) => {
-        setBarcode(e.target.value);
-    };
+    // const handleInputChange = (e) => {
+    //     setBarcode(e.target.value);
+    // };
 
-    const handleScanClick = () => {
-        alert(`Scanning Barcode: ${barcode}`);
-    };
+    // const handleScanClick = () => {
+    //     alert(`Scanning Barcode: ${barcode}`);
+    // };
 
     return (
         <>
             <Breadcrumb section="Sale Dashboard" title="Sale Dashboard" />
             {/* <h5>Sale Dashboard</h5> */}
-            <form action="">
+            {/* <form action="">
                 <div className="col-lg-12">
                     <div className="card">
                         <div className="card-header">
@@ -85,16 +90,15 @@ const SaleDashboard = () => {
             <div className="row">
                 <div className="col-lg-8 mt-20">
                     <div className="card">
-                        {/* Card Header */}
+                        
                         <div className="card-header">
                             <h5 className="card-title mb-0">Invoice</h5>
                         </div>
 
-                        {/* Card Body */}
                         <div className="card-body">
-                            <div className="row g-3"> {/* 🔥 Added g-3 for proper gap between columns */}
+                            <div className="row g-3">
 
-                                {/* Invoice Info - Product Total, Subtotal, Total Due */}
+                                
                                 <div className="col-lg-4 col-md-6 mb-10">
                                     <span>Product Total :</span> <span>99999.00</span>
                                 </div>
@@ -105,19 +109,18 @@ const SaleDashboard = () => {
                                     <span>Total Due :</span> <span>99999.00</span>
                                 </div>
 
-                                {/* Discount Input */}
+                     
                                 <div className="col-lg-3 col-md-6">
                                     <span>Discount</span>
                                     <input type="number" className="form-control" />
                                 </div>
 
-                                {/* Pay Amount Input */}
+                            
                                 <div className="col-lg-3 col-md-6">
                                     <span>Pay Amount</span>
                                     <input type="number" className="form-control" />
                                 </div>
 
-                                {/* Transaction Method */}
                                 <div className="col-lg-3 col-md-6">
                                     <span>Transaction Method <span className="text-danger">*</span></span>
                                     <select className="form-select">
@@ -128,16 +131,16 @@ const SaleDashboard = () => {
                                     </select>
                                 </div>
 
-                                {/* Generate Invoice Button */}
+                                
                                 <div className="col-lg-3 col-md-6 invoice-btn">
                                     <button className="btn btn-primary w-100">
                                         <FaFileInvoiceDollar className="mb-1" /> Generate Invoice
                                     </button>
                                 </div>
 
-                            </div> {/* End Row */}
-                        </div> {/* End Card Body */}
-                    </div> {/* End Card */}
+                            </div> 
+                        </div>
+                    </div>
                 </div>
                 <div className="col-lg-4 mt-20">
                     <div className="card">
@@ -233,9 +236,16 @@ const SaleDashboard = () => {
                         </div>
                     </div>
                 </div>
+            </div> */}
+<SalesSummery></SalesSummery>
+            <SalesChart></SalesChart>
+            <TotalRevenue></TotalRevenue>
+            <div className="d-flex flex-column justify-content-between flex-md-row gap-4">
+                <TopSelllingProducts />
+                <LowestSelllingProducts />
             </div>
 
-            
+
         </>
     );
 };

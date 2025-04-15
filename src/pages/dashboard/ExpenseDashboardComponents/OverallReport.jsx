@@ -6,7 +6,7 @@ const OverallReport = () => {
   let { userOverviewDonutChartOptionsTwo, userOverviewDonutChartSeriesTwo } =
     useReactApexChart();
   return (
-        <div className='col-xxl-12 col-md-6'>
+        <div className=''>
       <div className='card'>
         <div className='card-header'>
           <div className='d-flex align-items-center flex-wrap gap-2 justify-content-between'>
