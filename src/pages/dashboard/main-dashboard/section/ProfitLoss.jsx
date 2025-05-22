@@ -1,124 +1,50 @@
-import { Icon } from "@iconify/react";
-import { useGetProfitLossQuery } from "../../../../redux/features/api/mainDashboardApiSlice";
-import {
-    CartesianGrid,
-    Legend,
-    Line,
-    LineChart,
-    ResponsiveContainer,
-    Tooltip,
-    XAxis,
-    YAxis,
-} from "recharts";
+import ReactApexChart from "react-apexcharts";
+import useReactApexChart from "../../../../data/useReactApexChart";
 
 const ProfitLoss = () => {
-    // let { chartOptions, chartSeries } = useReactApexChart();
-    const { data, isLoading, error } = useGetProfitLossQuery();
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>{error?.error ? error?.error : error?.message}</p>;
+  let { enrollmentChartOptions, enrollmentChartSeries } = useReactApexChart();
     return (
-        <div className="col-xl-7">
-            <div className="card h-100">
-                <div className="card-body">
-                    <div className="d-flex flex-wrap align-items-center justify-content-between">
-                        <h6 className="text-lg mb-0">Profit vs Loss</h6>
-                        <select
-                            className="form-select bg-base form-select-sm w-auto"
-                            defaultValue="Yearly"
-                            SalesAnalytics
-                        >
-                            <option value="Yearly">Yearly</option>
-                            <option value="Monthly">Monthly</option>
-                            <option value="Weekly">Weekly</option>
-                            <option value="Today">Today</option>
-                        </select>
-                    </div>
-                    <div className="d-flex flex-wrap align-items-center gap-2 mt-8">
-                        <h6 className="mb-0">$27,200</h6>
-                        <span className="text-sm fw-semibold rounded-pill bg-success-focus text-success-main border br-success px-8 py-4 line-height-1 d-flex align-items-center gap-1">
-                            10% <Icon icon="bxs:up-arrow" className="text-xs" />
-                        </span>
-                        <span className="text-xs fw-medium">
-                            + $1500 Per Day
-                        </span>
-                    </div>
-                    <div style={{ width: "100%", height: "200px" }}>
-                        <ResponsiveContainer width="100%" height="100%">
-                            <LineChart
-                                data={data?.data ?? []}
-                                margin={{
-                                    top: 5,
-                                    right: 50,
-                                    left: 0,
-                                    bottom: 5,
-                                }}
-                            >
-                                {/* Grid lines */}
-                                <CartesianGrid
-                                    horizontal={false}
-                                    vertical={false}
-                                    strokeDasharray="3 3"
-                                    stroke="rgba(0, 0, 0, 0.1)"
-                                />
-                                {/* X-Axis */}
-                                <XAxis
-                                    dataKey="name"
-                                    axisLine={false}
-                                    tickLine={false}
-                                    tick={{ fontSize: 10, fill: "#666" }}
-                                />
-                                {/* Y-Axis */}
-                                <YAxis
-                                    axisLine={false}
-                                    tickLine={false}
-                                    tick={false}
-                                    label={false}
-                                />
-                                {/* Tooltip */}
-                                <Tooltip
-                                    contentStyle={{
-                                        background: "rgba(0, 0, 0, 0.8)",
-                                        color: "#fff",
-                                        border: "none",
-                                        fontSize: 10,
-                                        borderRadius: 5,
-                                    }}
-                                />
-                                {/* Profit Line */}
-                                <Line
-                                    type="monotone"
-                                    dataKey="profit"
-                                    stroke="#0056FD"
-                                    strokeWidth={3}
-                                    dot={false}
-                                    activeDot={{ r: 5 }}
-                                />
-                                {/* Loss Line */}
-                                <Line
-                                    type="monotone"
-                                    dataKey="loss"
-                                    stroke="#6AD2FF"
-                                    strokeWidth={3}
-                                    dot={false}
-                                    activeDot={{ r: 5 }}
-                                />
-                                {/* Legend */}
-                                <Legend
-                                    verticalAlign="top"
-                                    align="left"
-                                    wrapperStyle={{
-                                        fontSize: "18px",
-                                        fontWeight: "bold",
-                                        marginLeft: "10px",
-                                        textTransform: "capitalize",
-                                    }}
-                                />
-                            </LineChart>
-                        </ResponsiveContainer>
-                    </div>
-                </div>
+     <div className='col-xxl-12 rounded-3 mt-32'>
+        <div className='card h-100'>
+          <div className='card-header'>
+            <div className='d-flex align-items-center flex-wrap gap-2 justify-content-between'>
+              <h6 className='mb-2 fw-bold text-lg mb-0'>Profit VS Loss</h6>
+              <select className='form-select form-select-sm w-auto bg-base border-0 text-secondary-light'>
+                <option>This Month</option>
+                <option>This Week</option>
+                <option>This Year</option>
+              </select>
             </div>
+          </div>
+          <div className='card-body p-24'>
+            <ul className='d-flex flex-wrap align-items-center justify-content-center my-3 gap-3'>
+              <li className='d-flex align-items-center gap-2'>
+                <span className='w-12-px h-8-px rounded-pill bg-primary-600' />
+                <span className='text-secondary-light text-sm fw-semibold'>
+                  Profit:
+                  <span className='text-primary-light fw-bold'>50</span>
+                </span>
+              </li>
+              <li className='d-flex align-items-center gap-2'>
+                <span className='w-12-px h-8-px rounded-pill bg-warning-600' />
+                <span className='text-secondary-light text-sm fw-semibold'>
+                  Loss:
+                  <span className='text-primary-light fw-bold'> 500</span>
+                </span>
+              </li>
+            </ul>
+            <div id='enrollmentChart' className='apexcharts-tooltip-style-1'>
+              <ReactApexChart
+                options={enrollmentChartOptions}
+                series={enrollmentChartSeries}
+                type='area'
+                height={260}
+                width={"100%"}
+              />
+            </div>
+          </div>
         </div>
+      </div>
     );
 };
 
