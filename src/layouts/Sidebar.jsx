@@ -360,7 +360,159 @@ const Sidebar = ({ sidebarActive, mobileMenuControl, mobileMenu }) => {
               <span>Salary Sheet</span>
             </NavLink>
           </li>
-
+          <li className="sidebar-menu-group-title">All Reports</li>
+          <li className="dropdown">
+            <Link to="#">
+              <Icon icon="mdi:storefront" className="menu-icon" />
+              <span>Reports </span>
+            </Link>
+            <ul className="sidebar-submenu">
+              <li>
+                <NavLink
+                  to="/today-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  {/* <Icon
+                                        icon="fa:plus-circle"
+                                        className="text-primary-600 w-auto"
+                                    />{" "} */}
+                  Today Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/product-info-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Product Info Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/customar-due-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Customar Due Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Supplier-due-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Supplier Due Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/top-products"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Top Products{" "}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/purchase-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Purchase Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/customart-ledger"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Customart Ledger
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/supplier-ledger"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Supplier Ledger
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/account-transaction"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Account Transaction
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/expense-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Expense Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/employee-salary-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Employee Salary Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/sms-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Sms Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/monthly-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Monthly Report
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/yearly-report"
+                  className={(navData) =>
+                    navData.isActive ? "active-page" : ""
+                  }
+                >
+                  Yearly Report
+                </NavLink>
+              </li>
+            </ul>
+          </li>
           <li className="sidebar-menu-group-title">Assets</li>
           <li>
             <NavLink

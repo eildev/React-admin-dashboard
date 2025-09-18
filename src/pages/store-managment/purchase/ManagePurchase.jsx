@@ -3,11 +3,11 @@ import DynamicTable from "../../../components/table/DynamicTable";
 import { columns, mockProducts } from "../../../data/data";
 
 const ManagePurchase = () => {
-    return (
-        <>
-            <Breadcrumb section="Purchase Report" title="Manage Purchase" />
-            {/* <h5>Manage Purchase</h5> */}
-            <form action="" className="mb-20">
+  return (
+    <>
+      <Breadcrumb section="Purchase Report" title="Manage Purchase" />
+      {/* <h5>Manage Purchase</h5> */}
+      <form action="" className="mb-20">
         <div className="col-lg-12">
           <div className="card">
             <div className="card-header">
@@ -43,7 +43,7 @@ const ManagePurchase = () => {
                   <label className="form-label">Supplier</label>
 
                   <select className="form-select" defaultValue="none">
-                  <option>Select Supplier</option>
+                    <option>Select Supplier</option>
                     <option value="UK">UK</option>
                     <option value="BD">BD</option>
                     <option value="EU">EU</option>
@@ -63,8 +63,8 @@ const ManagePurchase = () => {
         </div>
       </form>
       <DynamicTable columns={columns} data={mockProducts} tableName={'Purchase Table'} />
-        </>
-    );
+    </>
+  );
 };
 
 export default ManagePurchase;
